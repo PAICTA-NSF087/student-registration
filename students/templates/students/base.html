@@ -1,0 +1,20 @@
+<DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, intial-scale=1.0">
+    <title>{%block title%}Student Registration System{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'students/style.css'%}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'student_list' %}">Home</a>
+        <a href="{% url 'student_create' %}">Register Student</a>
+    </nav>
+
+    <main class="container"> 
+        {% block content%}{% endblock %}
+    </main>
+</body>
+</html>
